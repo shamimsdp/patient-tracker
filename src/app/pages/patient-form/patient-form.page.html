@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Patient Info Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- id -->
+  <ion-item>
+      <ion-label position="floating">ID</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- client name -->
+  <ion-item>
+      <ion-label position="floating">Client Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <!-- age -->
+  <ion-item>
+      <ion-label position="floating">Age</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- gender -->
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select interface="popover" placeholder="Select One">
+      <ion-select-option value="f">Female</ion-select-option>
+      <ion-select-option value="m">Male</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <!-- contact -->
+  <ion-item>
+      <ion-label position="floating">Contact Number</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+  <!-- type -->
+  <ion-item>
+    <ion-label position="floating">Type</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Reference</ion-label>
+    <ionic-selectable [(ngModel)]="selected_users" [canSearch]="true" [items]="users" itemValueField="id"
+      itemTextField="name">
+    </ionic-selectable>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Loged by</ion-label>
+    <ion-input value="shamim" readonly></ion-input>
+  </ion-item>
+
+  <ion-button shape="round" (click)="presentAlert()" >Submit</ion-button>
+
+</ion-content>
